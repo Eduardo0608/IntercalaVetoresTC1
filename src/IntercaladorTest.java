@@ -29,4 +29,13 @@ public class IntercaladorTest {
         int[] esperado = {4, 5, 6};
         assertArrayEquals(esperado, resultado);
     }
+
+    @Test
+    public void testIntercalarVetorBComTamanhoZero() {
+        int[] a = {1, 2, 3};
+        int[] b = {};
+        int[] resultado = Intercalador.intercalar(a, b);
+        int[] esperado = {1, 2, 3};
+        assertArrayEquals(esperado, resultado);
+    }
 }
