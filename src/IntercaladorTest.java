@@ -11,4 +11,13 @@ public class IntercaladorTest {
         int[] esperado = {1, 4, 2, 5, 3, 6};
         assertArrayEquals(esperado, resultado);
     }
+
+    @Test
+    public void testIntercalarVetoresComTamanhoDiferente() {
+        int[] a = {1, 2, 3, 4};
+        int[] b = {5, 6};
+        int[] resultado = Intercalador.intercalar(a, b);
+        int[] esperado = {1, 5, 2, 6, 3, 4};
+        assertArrayEquals(esperado, resultado);
+    }
 }
