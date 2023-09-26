@@ -38,4 +38,14 @@ public class IntercaladorTest {
         int[] esperado = {1, 2, 3};
         assertArrayEquals(esperado, resultado);
     }
+
+    @Test
+    public void testIntercalarVetoresComTamanhoUm() {
+        int[] a = {9};
+        int[] b = {7};
+        int[] resultado = Intercalador.intercalar(a, b);
+        int[] esperado = {9, 7};
+        assertArrayEquals(esperado, resultado);
+    }
+
 }
